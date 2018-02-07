@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">P009</string>
+    <string name="text">Тут будет текст</string>
+    <string name="Message">Итог</string>
+    <string name="text1">"Нажата 1"</string>
+    <string name="text2">"Нажата 2"</string>
+    <string name="text3">"Нажата 3"</string>
+</resources>

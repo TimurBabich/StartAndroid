@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">P017_CreateAndDeleteView</string>
+    <string name="radioLeft">Left</string>
+    <string name="radioCenter">Center</string>
+    <string name="radioRight">Right</string>
+    <string name="addButton">Add</string>
+    <string name="clearButton">Clear</string>
+    <string name="binfo">Info</string>
+</resources>
