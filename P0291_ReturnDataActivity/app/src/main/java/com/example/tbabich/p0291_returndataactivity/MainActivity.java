@@ -38,9 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (data == null)
             return;
 
-        StringBuilder sb = new StringBuilder(tvName.getText().toString());
-        sb.append(data.getStringExtra("name"));
-        tvName.setText(sb.toString());
+        String name = data.getStringExtra("name");
+        tvName.setText(name);
     }
 
 

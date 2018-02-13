@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class GetNameActivity extends AppCompatActivity implements View.OnClickListener{
+public class GetNameActivity extends AppCompatActivity{
 
     EditText setName;
     Button btnSendName;
@@ -21,20 +21,21 @@ public class GetNameActivity extends AppCompatActivity implements View.OnClickLi
         Log.i("MyLogs", "onCreate GetNameActivity OK");
 
         setName = (EditText) findViewById(R.id.tvSetName);
-        btnSendName = (Button) findViewById(R.id.btnGetName);
+        btnSendName = (Button) findViewById(R.id.btnSendName);
 
-        Log.i("MyLogs", "Find views GetNameActivity OK");
+        Log.i("MyLogs", this.toString());
 
-        btnSendName.setOnClickListener(this);
+        btnSendName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("name", setName.getText().toString());
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
 
         Log.i("MyLogs", "btnSendName.setOnClickListener GetNameActivity OK");
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent();
-        intent.putExtra("name", setName.getText().toString());
-        setResult(RESULT_OK, intent);
-        finish();
-    }
 }
