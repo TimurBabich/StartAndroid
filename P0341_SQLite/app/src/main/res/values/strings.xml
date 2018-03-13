@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">P0341_SQLite</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>

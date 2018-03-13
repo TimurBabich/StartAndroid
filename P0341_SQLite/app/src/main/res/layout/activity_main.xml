@@ -7,13 +7,20 @@
     tools:context="com.example.tbabich.p0341_sqlite.MainActivity">
 
     <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Id" />
+
+    <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etId"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />
@@ -25,26 +32,28 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/etName"
-        android:layout_marginTop="22dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="Email" />
 
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
-        android:layout_below="@+id/etEmail"
+        android:layout_alignBaseline="@+id/btnRead"
+        android:layout_alignBottom="@+id/btnRead"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
         android:text="Add" />
 
     <Button
         android:id="@+id/btnRead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etEmail"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="Read" />
 
     <Button
@@ -58,4 +67,24 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:text="Clear" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_alignLeft="@+id/btnAdd"
+        android:layout_alignStart="@+id/btnAdd"
+        android:text="@string/update" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnRead"
+        android:layout_alignStart="@+id/btnRead"
+        android:layout_below="@+id/etEmail"
+        android:layout_marginTop="16dp"
+        android:text="@string/delete" />
 </RelativeLayout>
