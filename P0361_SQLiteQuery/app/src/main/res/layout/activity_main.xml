@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tbabich.p0361_sqlitequery.MainActivity">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text="Справочник стран" />
+
+    <Button
+        android:id="@+id/btnAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvInfo"
+        android:layout_margin="5dp"
+        android:layout_marginTop="21dp"
+        android:text="Все записи" />
+
+    <Button
+        android:id="@+id/btnFunc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnAll"
+        android:layout_margin="5dp"
+        android:text="Функция" />
+
+    <Button
+        android:id="@+id/btnPopul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnFunc"
+        android:layout_margin="5dp"
+        android:text="Население >" />
+
+    <Button
+        android:id="@+id/btnPopulReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnPopul"
+        android:layout_margin="5dp"
+        android:text="Население по региону" />
+
+    <Button
+        android:id="@+id/btnPopulReg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPopulReg"
+        android:layout_margin="5dp"
+        android:text="Население по региону >" />
+
+    <Button
+        android:id="@+id/btnSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnPopulReg2"
+        android:layout_margin="5dp"
+        android:text="Сортировка" />
+
+    <EditText
+        android:id="@+id/etFunc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnAll"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/btnFunc"
+        android:layout_toRightOf="@+id/btnFunc"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPopul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPopulReg"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/btnPopul"
+        android:layout_toRightOf="@+id/btnPopul"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPopulReg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPopulReg"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/btnPopulReg2"
+        android:layout_toRightOf="@+id/btnPopulReg2"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPopulReg2"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/btnSort"
+        android:layout_toRightOf="@+id/btnSort">
+
+        <RadioButton
+            android:id="@+id/rbName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Наименование" />
+
+        <RadioButton
+            android:id="@+id/rbPopul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Население" />
+
+        <RadioButton
+            android:id="@+id/rbReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Регион" />
+    </RadioGroup>
+</RelativeLayout>
